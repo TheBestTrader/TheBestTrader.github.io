@@ -16,9 +16,9 @@ const illustration = {
 
 const greeting = {
   username: "TheBestTrader",
-  title: "Hi all, I'm TheBestTrader",
+  title: "Hi all, I'm 李嘉祐",
   subTitle: emoji(
-    "擁有電機工程背景的開發者 🚀。熱衷於將 AI 技術落地，擅長運用 Python 開發電腦視覺模型 (如瑕疵檢測)，以及利用 n8n 打造自動化與大語言模型 (LLM) 應用系統。"
+    "擁有電機工程背景的開發者 。熱衷於將 AI 技術落地，擅長運用 Python 開發電腦視覺模型 (如瑕疵檢測)，以及利用 n8n 打造自動化與大語言模型 (LLM) 應用系統。"
   ),
   resumeLink: "", 
   displayGreeting: true 
@@ -34,9 +34,9 @@ const skillsSection = {
   title: "What I do",
   subTitle: "INTEGRATING HARDWARE KNOWLEDGE WITH AI AND AUTOMATION",
   skills: [
-    emoji("⚡ 運用 PyTorch 與深度學習模型進行電腦視覺與工業瑕疵檢測開發"),
-    emoji("⚡ 結合 n8n、Multi-Agent 與 RAG 技術建立高度自動化工作流與分析系統"),
-    emoji("⚡ 熟悉 Linux 環境配置、Docker 容器化部署與 Git/GitHub 版本控制")
+    emoji(" 運用 PyTorch 與深度學習模型進行電腦視覺與工業瑕疵檢測開發"),
+    emoji(" 結合 n8n、Multi-Agent 與 RAG 技術建立高度自動化工作流與分析系統"),
+    emoji(" 熟悉 Linux 環境配置、Docker 容器化部署與 Git/GitHub 版本控制")
   ],
   softwareSkills: [
     { skillName: "python", fontAwesomeClassname: "fab fa-python" },
@@ -101,7 +101,7 @@ const bigProjects = {
 };
 
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
+  title: emoji("Achievements And Certifications  "),
   subtitle: "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
   achievementsCards: [],
   display: false 
@@ -117,13 +117,13 @@ const blogSection = {
 
 const talkSection = {
   title: "TALKS",
-  subtitle: emoji("I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"),
+  subtitle: emoji("I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE "),
   talks: [],
   display: false 
 };
 
 const podcastSection = {
-  title: emoji("Podcast 🎙️"),
+  title: emoji("Podcast "),
   subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
   podcast: [],
   display: false 
@@ -137,7 +137,7 @@ const resumeSection = {
 
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
+  title: emoji("Contact Me "),
   subtitle: "Discuss a project or just want to say hi? My Inbox is open for all.",
   number: "",
   email_address: "ken7040532@gmail.com"
