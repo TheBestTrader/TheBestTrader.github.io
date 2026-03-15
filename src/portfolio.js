@@ -9,6 +9,7 @@ const splashScreen = {
   duration: 2000 
 };
 
+
 const illustration = {
   animated: true 
 };
