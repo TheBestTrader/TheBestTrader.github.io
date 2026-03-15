@@ -20,22 +20,21 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
+  username: "TheBestTrader",
+  title: "Hi all, I'm TheBestTrader",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "擁有電機工程背景的開發者 🚀。熱衷於將 AI 技術落地，擅長運用 Python 開發電腦視覺模型 (如瑕疵檢測)，以及利用 n8n 打造自動化與大語言模型 (LLM) 應用系統。"
   ),
-  resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
-  displayGreeting: true // Set false to hide this section, defaults to true
+  resumeLink: "", // 如果你有雲端 PDF 履歷連結可以貼在這裡，沒有的話先留空
+  displayGreeting: true 
 };
 
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
+  github: "https://github.com/TheBestTrader",
   linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
+  gmail: "ken7040532@gmail.com",
   gitlab: "https://gitlab.com/saadpasta",
   facebook: "https://www.facebook.com/saad.pasta7",
   medium: "https://medium.com/@saadpasta",
@@ -49,16 +48,22 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "INTEGRATING HARDWARE KNOWLEDGE WITH AI AND AUTOMATION",
   skills: [
-    emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
-    ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-    )
+    emoji("⚡ 運用 PyTorch 與深度學習模型進行電腦視覺與工業瑕疵檢測開發"),
+    emoji("⚡ 結合 n8n、Multi-Agent 與 RAG 技術建立高度自動化工作流與分析系統"),
+    emoji("⚡ 熟悉 Linux 環境配置、Docker 容器化部署與 Git/GitHub 版本控制")
   ],
+  softwareSkills: [
+    { skillName: "python", fontAwesomeClassname: "fab fa-python" },
+    { skillName: "linux", fontAwesomeClassname: "fab fa-linux" },
+    { skillName: "docker", fontAwesomeClassname: "fab fa-docker" },
+    { skillName: "git", fontAwesomeClassname: "fab fa-git" },
+    { skillName: "github", fontAwesomeClassname: "fab fa-github" },
+    { skillName: "database", fontAwesomeClassname: "fas fa-database" }
+  ],
+  display: true 
+};
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
 https://fontawesome.com/icons?d=gallery */
@@ -324,7 +329,7 @@ const blogSection = {
         "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
@@ -343,7 +348,7 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -356,7 +361,7 @@ const podcastSection = {
   podcast: [
     "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Resume Section
@@ -373,7 +378,7 @@ const contactInfo = {
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
   number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+  email_address: "ken7040532@gmail.com"
 };
 
 // Twitter Section
@@ -383,7 +388,7 @@ const twitterDetails = {
   display: true // Set true to display this section, defaults to false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,
