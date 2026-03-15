@@ -49,9 +49,21 @@ const skillsSection = {
   display: true 
 };
 
+// Education Section
 const educationInfo = {
-  display: false, 
-  schools: []
+  display: true, // 
+  schools: [
+    {
+      schoolName: "大同大學 (Tatung University)",
+      logo: require("./assets/images/stanfordLogo.png"), // 
+      subHeader: "電機工程學系",
+      desc: "具備紮實的硬體與電路基礎，並積極跨足軟體與 AI 開發領域。",
+      descBullets: [
+        "班級代表 (109-1 ~ 111-1)",
+        "畢聯會 活動長"
+      ]
+    }
+  ]
 };
 
 const techStack = {
@@ -60,13 +72,23 @@ const techStack = {
   displayCodersrank: false 
 };
 
+// Work experience section
 const workExperiences = {
-  display: false, 
-  experience: []
+  display: true, // 
+  experience: [
+    {
+      role: "AI 架構師專班",
+      company: "國立陽明交通大學",
+      companylogo: require("./assets/images/facebookLogo.png"), // 
+      date: "2025/10 - 2026/10", // 
+      desc: "參與 AI 架構師專班，深化人工智慧應用、深度學習模型建立與系統架構設計之能力。",
+      descBullets: []
+    }
+  ]
 };
 
 const openSource = {
-  githubUserName: "TheBestTrader", // 👈 確保有這一行，且名稱完全正確
+  githubUserName: "TheBestTrader", // 
   showGithubProfile: "true", 
   display: true 
 };
