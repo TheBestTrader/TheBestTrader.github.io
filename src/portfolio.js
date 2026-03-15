@@ -65,6 +65,7 @@ const workExperiences = {
 };
 
 const openSource = {
+  githubUserName: "TheBestTrader", // 👈 確保有這一行，且名稱完全正確
   showGithubProfile: "true", 
   display: true 
 };
