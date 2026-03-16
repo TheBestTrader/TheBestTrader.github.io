@@ -102,7 +102,7 @@ const bigProjects = {
 
 // Achievement Section
 const achievementSection = {
-  title: emoji("證照與檢定 🏆 "),
+  title: emoji("Licensure & Certification "),
   subtitle: "結合 AI 專業與金融科技領域的認證，以及外語能力證明。",
   achievementsCards: [
     {
