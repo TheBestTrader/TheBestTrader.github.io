@@ -108,21 +108,21 @@ const achievementSection = {
     {
       title: "Microsoft AI-900",
       subtitle: "Azure AI Fundamentals (微軟人工智慧基礎認證)",
-      image: require("./assets/images/microsoft"), // 
+      image: require("./assets/images/microsoft.jpg"), // 
       imageAlt: "Microsoft AI-900 Logo",
       footerLink: []
     },
     {
       title: "TOEIC 多益英語測驗",
       subtitle: "測驗成績：580 分",
-      image: require("./assets/images/TOEIC"), // 
+      image: require("./assets/images/TOEIC.webp"), // 
       imageAlt: "TOEIC Logo",
       footerLink: []
     },
     {
       title: "金融科技力知識檢定",
       subtitle: "台灣金融研訓院 (TABF) 專業測驗",
-      image: require("./assets/images/TABF"), //
+      image: require("./assets/images/TABF.png"), //
       imageAlt: "Fintech Certification Logo",
       footerLink: []
     }
