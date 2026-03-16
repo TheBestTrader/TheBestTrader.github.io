@@ -9,7 +9,6 @@ const splashScreen = {
   duration: 2000 
 };
 
-
 const illustration = {
   animated: true 
 };
@@ -24,6 +23,13 @@ const greeting = {
   displayGreeting: true 
 };
 
+// 新增 Function 來動態組裝 Email，避免爬蟲直接掃描到完整的信箱
+const getEmail = () => {
+  const user = "ken7040532";
+  const domain = "gmail.com";
+  return `${user}@${domain}`;
+};
+
 const socialMediaLinks = [
   {
     name: "Github",
@@ -31,14 +37,14 @@ const socialMediaLinks = [
     fontAwesomeIcon: "fa-github",
     backgroundColor: "#181717"
   },
-  
   {
     name: "Gmail",
-    link: "mailto:ken7040532@gmail.com",
+    link: `mailto:${getEmail()}`, 
     fontAwesomeIcon: "fa-google",
     backgroundColor: "#D14836"
   }
 ];
+
 const skillsSection = {
   title: "What I do",
   subTitle: "熱衷於探索各種新技術，結合軟硬體與 AI 解決實際問題的開發者",
@@ -88,7 +94,7 @@ const workExperiences = {
   experience: [
     {
       role: "AI 架構師專班",
-      company: "國立陽明交通大學",
+      company: "國立陽明交通大學 (NYCU)",
       companylogo: require("./assets/images/nycuLogo.png"), // 
       date: "2025/10 - 2026/10", // 
       desc: "參與 AI 架構師專班，深化人工智慧應用、深度學習模型建立與系統架構設計之能力。",
@@ -113,30 +119,29 @@ const bigProjects = {
 // Achievement Section
 const achievementSection = {
   title: emoji("Licensure & Certification "),
-  subtitle: "結合 AI 專業與金融科技領域的認證，以及外語能力證明。",
+  subtitle: "Certifications in AI and FinTech, along with proof of foreign language proficiency.",
   achievementsCards: [
     {
       title: "Microsoft AI-900",
-      subtitle: "Azure AI Fundamentals (微軟人工智慧基礎認證)",
+      subtitle: "Azure AI Fundamentals",
       image: require("./assets/images/microsoft.jpg"), // 
       imageAlt: "Microsoft AI-900 Logo",
       footerLink: []
     },
     {
-      title: "TOEIC 多益英語測驗",
-      subtitle: "測驗成績：580 分",
+      title: "TOEIC English Test",
+      subtitle: "Score: 580",
       image: require("./assets/images/TOEIC.webp"), // 
       imageAlt: "TOEIC Logo",
       footerLink: []
     },
     {
-      title: "金融科技力知識檢定",
-      subtitle: "台灣金融研訓院 (TABF) 專業測驗",
+      title: "FinTech Knowledge Certification",
+      subtitle: "Taiwan Academy of Banking and Finance (TABF)",
       image: require("./assets/images/TABF.png"), //
       imageAlt: "Fintech Certification Logo",
       footerLink: []
     }
- 
   ],
   display: true // 
 };
@@ -169,11 +174,10 @@ const resumeSection = {
   display: false 
 };
 
-
 const contactInfo = {
   title: emoji("Reach Out to me! "),
-  subtitle: "討論專案、技術交流，或是有任何合作機會，隨時歡迎聯絡我！",
-  email_address: "ken7040532@gmail.com" // 
+  subtitle: "Open to discussing projects, technical exchanges, or potential collaborations. Feel free to reach out!",
+  email_address: getEmail() // 
 };
 
 const twitterDetails = {
