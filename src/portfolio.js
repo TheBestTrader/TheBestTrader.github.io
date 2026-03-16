@@ -36,7 +36,8 @@ const skillsSection = {
   skills: [
     emoji(" 運用 PyTorch 與深度學習模型進行電腦視覺與工業瑕疵檢測開發"),
     emoji(" 結合 n8n、Multi-Agent 與 RAG 技術建立高度自動化工作流與分析系統"),
-    emoji(" 熟悉 Linux 環境配置、Docker 容器化部署與 Git/GitHub 版本控制")
+    emoji(" 熟悉 Linux 環境配置、Docker 容器化部署與 Git/GitHub 版本控制"),
+    emoji(" 使用python API 串接、streamlit UI 介面應用、pandas、numpy")
   ],
   softwareSkills: [
     { skillName: "python", fontAwesomeClassname: "fab fa-python" },
