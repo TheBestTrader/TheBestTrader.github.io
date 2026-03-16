@@ -100,11 +100,35 @@ const bigProjects = {
   display: false 
 };
 
+// Achievement Section
 const achievementSection = {
-  title: emoji("Achievements And Certifications  "),
-  subtitle: "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
-  achievementsCards: [],
-  display: false 
+  title: emoji("證照與檢定 🏆 "),
+  subtitle: "結合 AI 專業與金融科技領域的認證，以及外語能力證明。",
+  achievementsCards: [
+    {
+      title: "Microsoft AI-900",
+      subtitle: "Azure AI Fundamentals (微軟人工智慧基礎認證)",
+      image: require("./assets/images/microsoft"), // 
+      imageAlt: "Microsoft AI-900 Logo",
+      footerLink: []
+    },
+    {
+      title: "TOEIC 多益英語測驗",
+      subtitle: "測驗成績：580 分",
+      image: require("./assets/images/TOEIC"), // 
+      imageAlt: "TOEIC Logo",
+      footerLink: []
+    },
+    {
+      title: "金融科技力知識檢定",
+      subtitle: "台灣金融研訓院 (TABF) 專業測驗",
+      image: require("./assets/images/TABF"), //
+      imageAlt: "Fintech Certification Logo",
+      footerLink: []
+    }
+ 
+  ],
+  display: true // 
 };
 
 const blogSection = {
