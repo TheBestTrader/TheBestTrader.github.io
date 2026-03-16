@@ -24,15 +24,24 @@ const greeting = {
   displayGreeting: true 
 };
 
-const socialMediaLinks = {
-  github: "https://github.com/TheBestTrader",
-  gmail: "ken7040532@gmail.com",
-  display: true 
-};
-
+const socialMediaLinks = [
+  {
+    name: "Github",
+    link: "https://github.com/TheBestTrader",
+    fontAwesomeIcon: "fa-github",
+    backgroundColor: "#181717"
+  },
+  
+  {
+    name: "Gmail",
+    link: "mailto:ken7040532@gmail.com",
+    fontAwesomeIcon: "fa-google",
+    backgroundColor: "#D14836"
+  }
+];
 const skillsSection = {
   title: "What I do",
-  subTitle: "INTEGRATING HARDWARE KNOWLEDGE WITH AI AND AUTOMATION",
+  subTitle: "熱衷於探索各種新技術，結合軟硬體與 AI 解決實際問題的開發者",
   skills: [
     emoji(" 運用 PyTorch 與深度學習模型進行電腦視覺與工業瑕疵檢測開發"),
     emoji(" 結合 n8n、Multi-Agent 與 RAG 技術建立高度自動化工作流與分析系統"),
@@ -162,10 +171,9 @@ const resumeSection = {
 
 
 const contactInfo = {
-  title: emoji("Contact Me "),
-  subtitle: "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "",
-  email_address: "ken7040532@gmail.com"
+  title: emoji("Reach Out to me! "),
+  subtitle: "討論專案、技術交流，或是有任何合作機會，隨時歡迎聯絡我！",
+  email_address: "ken7040532@gmail.com" // 
 };
 
 const twitterDetails = {
