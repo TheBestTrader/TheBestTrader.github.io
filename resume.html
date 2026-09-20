@@ -4,9 +4,9 @@
 @media screen{body{font-size:18px}h2{font-size:22px}h3{font-size:19px}.contact,.meta,.foot{font-size:15px}.toolbar{gap:18px;flex-wrap:wrap;align-items:center}button{font:inherit}.resume-languages{display:flex;gap:12px}.resume-languages [aria-current=page]{font-weight:700}}
 </style></head><body><nav class="toolbar" aria-label="履歷操作"><a href="index.html">← 回作品集</a><div class="resume-languages" role="group" aria-label="語言 / Language"><a href="resume.html" lang="zh-Hant" aria-current="page">中文</a><a href="resume-en.html" lang="en">EN</a></div><button id="print">列印／另存 PDF</button></nav><main>
 <header><h1>李嘉祐</h1><p class="subtitle">AI 工程｜RAG・Agent・資料系統</p><p class="contact"><a href="mailto:ken7040532@gmail.com">ken7040532@gmail.com</a> · <a href="https://github.com/TheBestTrader">github.com/TheBestTrader</a></p></header>
-<p class="intro">電機背景，透過 AI 專題與個人研究累積 Python、模型應用及資料流程實作。關注檢索與生成品質、工具呼叫、系統整合，以及可追溯的評估方法。</p>
+<p class="intro">電機背景，參與公司與 NVIDIA 合作案，受指派執行 NVIDIA 生態系與企業 RAG 技術評估。實作涵蓋 TensorRT-LLM 推論測試、Nemotron 模型比較與 RAG 整合驗證，關注效能、回答品質及導入限制。</p>
 <section><h2>技術能力</h2><p><strong>AI 與模型：</strong>RAG、LangGraph、Function Calling、PyTorch、ResNet、模型評估</p><p><strong>資料與系統：</strong>Python、JavaScript、FastAPI、WebSocket、SQLite、Docker、n8n、Streamlit</p></section>
-<section><h2>精選專案</h2>
+<section><h2>精選專案</h2><article><h3>企業 RAG 與 NVIDIA 生態系評估 <span class="meta">｜TensorRT-LLM・Nemotron・RAG</span></h3><ul><li>在公司與 NVIDIA 合作案中，受指派評估生態系套件用於企業 RAG 的可行性，涵蓋技術測試、系統整合與模型比較。</li><li>測試 TensorRT-LLM 推論與併發行為，評估 Nemotron embedding、reranker、LLM；以受控比較區分元件效能、端到端延遲與回答品質。</li></ul></article>
 <article><h3>n8n 多代理股市分析 <span class="meta">｜JavaScript・TWSE API・RAG</span></h3><ul><li>拆分主流程、個股、大盤與新聞檢索，串接十二個月份資料請求、格式清洗與多週期移動平均計算。</li><li>結合 RSS、embedding 與向量檢索提供回答脈絡；專案著重資料整合，未宣稱預測或交易績效。</li></ul></article>
 <article><h3>PCB 瑕疵影像分類 <span class="meta">｜PyTorch・ResNet</span></h3><ul><li>使用遷移學習與影像增強進行六類瑕疵分類，保留 ResNet18、ResNet50 實驗及混淆矩陣。</li><li>歷史六分類驗證準確率 89.36%；獨立測試集驗證尚待補足，未視為產線成效。</li></ul></article>
 <article><h3>訂單流資料與研究系統 <span class="meta">｜Python・FastAPI・WebSocket・SQLite</span></h3><ul><li>串接逐筆行情落地、K 棒聚合、訂單流計算與即時儀表板，呈現 Delta、CVD、VWAP 等資訊。</li><li>以資料去重、備份及共用引擎歷史重放支援可追溯研究，區分工程成果與策略獲利驗證。</li></ul></article></section>
