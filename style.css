@@ -22,3 +22,25 @@ html[lang=en] h1{font-size:clamp(36px,4vw,52px);line-height:1.2;letter-spacing:-
 @media(max-width:380px){.container,.nav-wrap{width:calc(100% - 32px)}.brand-mark{font-size:16px}.brand{gap:6px}.language-switch{font-size:13px}.language-switch a{padding:5px 7px}.menu-toggle{gap:5px;margin-left:0}h1{font-size:33px}.rag-visual{padding:24px 18px}.rag-stages{flex-wrap:wrap}.feature-copy,.card-body{padding:23px}.contact-section{padding:24px 18px}.email-link{font-size:15px}}
 
 dialog .caveat,dialog .dialog-sub{font-size:16px}dialog h3{font-size:20px}.language-switch a{min-height:40px;display:flex;align-items:center}
+
+/* Full-width layout and larger reading sizes */
+.container,.nav-wrap{width:calc(100% - clamp(32px,5vw,112px));max-width:none}
+body{font-size:20px}
+.hero{min-height:calc(100svh - 90px);grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(30px,5vw,100px);padding-block:64px}
+h1,html[lang=en] h1{font-size:clamp(44px,4.3vw,80px)}
+h2{font-size:clamp(38px,3vw,56px)}
+.hero-intro,.feature-copy>p,.card-body>p,.principles p,.about-copy>p,.section-note,.contact-section>div>p,dialog p{font-size:21px;line-height:1.85}
+nav,.button,.text-link,.project-link,.feature-points,.timeline-item p,.certificate p,.skill-row p,.contact-secondary,.more-work button{font-size:19px}
+.hello{font-size:24px}.brand{font-size:21px}.language-switch{font-size:17px}.language-switch a{padding:9px 13px}
+.tags span,.project-kicker,.hero-tags,.diagram-caption,.copy-status,.pipeline-row p{font-size:16px}
+.hero .eyebrow,.eyebrow{font-size:13px}.small{font-size:12px}
+.pipeline-row strong,html[lang=en] .pipeline-row strong{font-size:24px}.pipeline-row{padding:24px}.visual-bottom{font-size:15px}
+.feature-copy h3{font-size:clamp(34px,2.7vw,50px)}.card-body h3,.principles h3{font-size:30px}.background-block h3,.timeline-item strong,.certificate strong{font-size:22px}
+.card-body{padding:36px}.project-grid{gap:32px}.feature-copy,.rag-visual{padding:clamp(28px,3vw,56px)}
+.section-note{max-width:34ch}.feature-copy>p,.about-copy>p,.principles p{max-width:65ch}
+.contact-section h2{font-size:clamp(36px,3vw,56px)}.email-link{font-size:22px}.footer{font-size:15px}
+dialog{width:min(1000px,calc(100% - 40px));max-width:none}dialog h2{font-size:36px}dialog h3{font-size:25px}dialog .caveat,dialog .dialog-sub{font-size:18px}
+@media(min-width:1800px){.hero-intro,.card-body>p,.feature-copy>p{font-size:23px}.card-visual{min-height:340px}.hero-visual{max-width:780px;width:100%;justify-self:end}}
+@media(max-width:1100px){.hero{gap:28px}.pipeline-row{padding:18px}.pipeline-row strong,html[lang=en] .pipeline-row strong{font-size:21px}.nav-wrap{flex-wrap:wrap}.section-heading{gap:24px}.section-note{max-width:28ch}.contact-section{flex-wrap:wrap}}
+@media(max-width:760px){.container,.nav-wrap{width:calc(100% - 32px)}body{font-size:19px}.hero{grid-template-columns:1fr;min-height:0;padding-block:44px 56px;gap:38px}h1,html[lang=en] h1{font-size:clamp(37px,8.5vw,56px)}.hero-intro,.feature-copy>p,.card-body>p,.principles p,.about-copy>p,.section-note,.contact-section>div>p,dialog p{font-size:19px}.section h2,.contact-section h2{font-size:35px}.card-body h3,.principles h3{font-size:28px}.feature-copy h3{font-size:33px}.brand,html[lang=en] .brand{font-size:16px}.language-switch{font-size:14px}.language-switch a{padding:7px 9px}.menu-toggle{font-size:16px}.hero .eyebrow{font-size:10px}.hero-tags,.tags span,.project-kicker{font-size:14px}.hero-visual{max-width:none}.pipeline-row p{font-size:13px}.pipeline-row strong,html[lang=en] .pipeline-row strong{font-size:20px}.card-body{padding:26px}.feature-copy,.rag-visual{padding:26px}.section-note{max-width:none}.contact-section{padding:28px 20px}.email-link{font-size:18px;overflow-wrap:anywhere}.contact-secondary{font-size:17px}.footer{font-size:13px}dialog{width:calc(100% - 24px);padding:22px}dialog h2{font-size:30px}dialog h3{font-size:23px}dialog .caveat,dialog .dialog-sub{font-size:17px}}
+@media(max-width:380px){.brand,html[lang=en] .brand{font-size:14px}.language-switch{font-size:13px}.language-switch a{padding:6px 7px}.menu-toggle{font-size:14px}h1,html[lang=en] h1{font-size:35px}.email-link{font-size:16px}.feature-copy,.rag-visual,.card-body{padding:23px}}
