@@ -10,17 +10,6 @@ window.projectsEn = {
     ],
     limit: 'This page describes methods and areas of focus. Internal company metrics, customer data and implementation details are excluded from the public portfolio.'
   },
-  agent: {
-    title: 'Multi-agent customer support prototype',
-    sub: 'Personal PoC / LangGraph · Gemini · Streamlit',
-    intro: 'Route questions to different roles, let models retrieve information through tools, and make routing decisions visible in the interface.',
-    sections: [
-      ['Implementation', 'Use StateGraph to connect Router, Tech, Sales and General nodes. Technical and sales agents have their own tools; ToolNode executes calls before returning control to the agent to compose a response.'],
-      ['Design trade-offs', 'Display routing messages in the interface, but remove them before passing the conversation to the next agent to avoid contaminating its context. Billing questions and sales recommendations also require distinct tools and task boundaries.'],
-      ['Next validation steps', 'Create a fixed intent dataset to assess routing, tool arguments, answer quality and failure cases before integrating real services.']
-    ],
-    limit: 'Tools currently return mock data. This is a proof of concept, not a live telecom or ticketing integration. It uses function calling; it is not presented as an implemented MCP service.'
-  },
   n8n: {
     title: 'n8n multi-agent market analysis',
     sub: 'Training project / n8n · JavaScript · TWSE API · RAG',
