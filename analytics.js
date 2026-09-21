@@ -2,7 +2,16 @@
 (() => {
   'use strict';
   const endpoint = document.currentScript?.dataset.endpoint;
-  if (!endpoint || !endpoint.startsWith('https://')) return;
+  if (!endpoint || !endpoint.startsWith('https://')) {
+    console.warn('Portfolio analytics: endpoint unavailable.');
+    return;
+  }
+  // The preference is local to this website and browser profile, never a user identifier.
+  function excluded() {
+    try { return localStorage.getItem('portfolio-stats-excluded') === '1'; }
+    catch (_) { return true; } // Do not collect if the privacy preference cannot be read.
+  }
+  if (excluded()) return;
   if (navigator.doNotTrack === '1' || navigator.globalPrivacyControl === true) {
     console.info('Portfolio analytics: skipped because this browser requests privacy.');
     return;
@@ -19,6 +28,7 @@
     const ua = navigator.userAgent;
     const device = /iPad|Tablet|Android(?!.*Mobile)/i.test(ua) ? 'tablet' : /Mobile/i.test(ua) ? 'mobile' : 'desktop';
     const payload = JSON.stringify({event: crypto.randomUUID(), session: session.id, path: location.pathname, referrer, device, language: navigator.language || 'unknown'});
+    if (excluded()) return;
     fetch(endpoint, {method: 'POST', mode: 'cors', credentials: 'omit', keepalive: true, referrerPolicy: 'no-referrer', headers: {'Content-Type': 'text/plain'}, body: payload})
       .then(response => { if (!response.ok) console.warn('Portfolio analytics: collection unavailable.'); })
       .catch(() => console.warn('Portfolio analytics: connection unavailable.'));
