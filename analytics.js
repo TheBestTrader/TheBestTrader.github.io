@@ -1,8 +1,12 @@
 // 自架流量統計；data-endpoint 指定本網站的 HTTPS 收集網址。
 (() => {
   'use strict';
+  // A non-identifying DOM status makes collection failures diagnosable without logging visitor data.
+  const status = value => { document.documentElement.dataset.analyticsStatus = value; };
+  status('starting');
   const endpoint = document.currentScript?.dataset.endpoint;
   if (!endpoint || !endpoint.startsWith('https://')) {
+    status('endpoint-unavailable');
     console.warn('Portfolio analytics: endpoint unavailable.');
     return;
   }
@@ -11,8 +15,9 @@
     try { return localStorage.getItem('portfolio-stats-excluded') === '1'; }
     catch (_) { return true; } // Do not collect if the privacy preference cannot be read.
   }
-  if (excluded()) return;
+  if (excluded()) { status('excluded'); return; }
   if (navigator.doNotTrack === '1' || navigator.globalPrivacyControl === true) {
+    status('browser-privacy');
     console.info('Portfolio analytics: skipped because this browser requests privacy.');
     return;
   }
@@ -28,9 +33,13 @@
     const ua = navigator.userAgent;
     const device = /iPad|Tablet|Android(?!.*Mobile)/i.test(ua) ? 'tablet' : /Mobile/i.test(ua) ? 'mobile' : 'desktop';
     const payload = JSON.stringify({event: crypto.randomUUID(), session: session.id, path: location.pathname, referrer, device, language: navigator.language || 'unknown'});
-    if (excluded()) return;
+    if (excluded()) { status('excluded'); return; }
+    status('sending');
     fetch(endpoint, {method: 'POST', mode: 'cors', credentials: 'omit', keepalive: true, referrerPolicy: 'no-referrer', headers: {'Content-Type': 'text/plain'}, body: payload})
-      .then(response => { if (!response.ok) console.warn('Portfolio analytics: collection unavailable.'); })
-      .catch(() => console.warn('Portfolio analytics: connection unavailable.'));
-  } catch (_) { console.warn('Portfolio analytics: browser feature unavailable.'); }
+      .then(response => {
+        status(response.ok ? 'recorded' : 'http-' + response.status);
+        if (!response.ok) console.warn('Portfolio analytics: collection unavailable.');
+      })
+      .catch(() => { status('connection-unavailable'); console.warn('Portfolio analytics: connection unavailable.'); });
+  } catch (_) { status('browser-feature-unavailable'); console.warn('Portfolio analytics: browser feature unavailable.'); }
 })();
